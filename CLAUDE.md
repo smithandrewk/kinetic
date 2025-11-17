@@ -1,0 +1,1 @@
+- This is a teaching repository. Every line of code is meant to teach the user.

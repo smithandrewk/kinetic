@@ -1,0 +1,961 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4907B4F82ECB8BBE00491BD2 /* Sensor Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4907B4E52ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
+			remoteInfo = "Sensor Watch App";
+		};
+		4907B4EF2ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
+			remoteInfo = "Sensor Watch App";
+		};
+		4907B4F62ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
+			remoteInfo = "Sensor Watch App";
+		};
+		49A868FF2EC51BDE00F4FD54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A868ED2EC51BDD00F4FD54;
+			remoteInfo = iphone_sensor_app_no_claude;
+		};
+		49A869092EC51BDE00F4FD54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49A868ED2EC51BDD00F4FD54;
+			remoteInfo = iphone_sensor_app_no_claude;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4907B4F92ECB8BBE00491BD2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4907B4F82ECB8BBE00491BD2 /* Sensor Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sensor Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sensor Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sensor Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone_sensor_app_no_claude.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_sensor_app_no_claudeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_sensor_app_no_claudeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Sensor Watch App";
+			sourceTree = "<group>";
+		};
+		4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Sensor Watch AppTests";
+			sourceTree = "<group>";
+		};
+		4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Sensor Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iphone_sensor_app_no_claude;
+			sourceTree = "<group>";
+		};
+		49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iphone_sensor_app_no_claudeTests;
+			sourceTree = "<group>";
+		};
+		49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = iphone_sensor_app_no_claudeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4907B4D22ECB8BBD00491BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4E12ECB8BBE00491BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4EB2ECB8BBE00491BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868EB2EC51BDD00F4FD54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868FB2EC51BDE00F4FD54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A869052EC51BDE00F4FD54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49A868E52EC51BDD00F4FD54 = {
+			isa = PBXGroup;
+			children = (
+				49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
+				49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
+				49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
+				4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */,
+				4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */,
+				4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
+				49A868EF2EC51BDD00F4FD54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49A868EF2EC51BDD00F4FD54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */,
+				49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */,
+				49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */,
+				4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */,
+				4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */,
+				4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch App" */;
+			buildPhases = (
+				4907B4D12ECB8BBD00491BD2 /* Sources */,
+				4907B4D22ECB8BBD00491BD2 /* Frameworks */,
+				4907B4D32ECB8BBD00491BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */,
+			);
+			name = "Sensor Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Sensor Watch App";
+			productReference = 4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4907B4E32ECB8BBE00491BD2 /* Sensor Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4907B5012ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppTests" */;
+			buildPhases = (
+				4907B4E02ECB8BBE00491BD2 /* Sources */,
+				4907B4E12ECB8BBE00491BD2 /* Frameworks */,
+				4907B4E22ECB8BBE00491BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4907B4E62ECB8BBE00491BD2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */,
+			);
+			name = "Sensor Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "Sensor Watch AppTests";
+			productReference = 4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4907B4ED2ECB8BBE00491BD2 /* Sensor Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4907B5022ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppUITests" */;
+			buildPhases = (
+				4907B4EA2ECB8BBE00491BD2 /* Sources */,
+				4907B4EB2ECB8BBE00491BD2 /* Frameworks */,
+				4907B4EC2ECB8BBE00491BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4907B4F02ECB8BBE00491BD2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
+			);
+			name = "Sensor Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "Sensor Watch AppUITests";
+			productReference = 4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claude" */;
+			buildPhases = (
+				49A868EA2EC51BDD00F4FD54 /* Sources */,
+				49A868EB2EC51BDD00F4FD54 /* Frameworks */,
+				49A868EC2EC51BDD00F4FD54 /* Resources */,
+				4907B4F92ECB8BBE00491BD2 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4907B4F72ECB8BBE00491BD2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
+			);
+			name = iphone_sensor_app_no_claude;
+			packageProductDependencies = (
+			);
+			productName = iphone_sensor_app_no_claude;
+			productReference = 49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49A868FD2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A869152EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeTests" */;
+			buildPhases = (
+				49A868FA2EC51BDE00F4FD54 /* Sources */,
+				49A868FB2EC51BDE00F4FD54 /* Frameworks */,
+				49A868FC2EC51BDE00F4FD54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A869002EC51BDE00F4FD54 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
+			);
+			name = iphone_sensor_app_no_claudeTests;
+			packageProductDependencies = (
+			);
+			productName = iphone_sensor_app_no_claudeTests;
+			productReference = 49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		49A869072EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A869182EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeUITests" */;
+			buildPhases = (
+				49A869042EC51BDE00F4FD54 /* Sources */,
+				49A869052EC51BDE00F4FD54 /* Frameworks */,
+				49A869062EC51BDE00F4FD54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49A8690A2EC51BDE00F4FD54 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
+			);
+			name = iphone_sensor_app_no_claudeUITests;
+			packageProductDependencies = (
+			);
+			productName = iphone_sensor_app_no_claudeUITests;
+			productReference = 49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49A868E62EC51BDD00F4FD54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					4907B4D42ECB8BBD00491BD2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					4907B4E32ECB8BBE00491BD2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4907B4D42ECB8BBD00491BD2;
+					};
+					4907B4ED2ECB8BBE00491BD2 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 4907B4D42ECB8BBD00491BD2;
+					};
+					49A868ED2EC51BDD00F4FD54 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					49A868FD2EC51BDE00F4FD54 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 49A868ED2EC51BDD00F4FD54;
+					};
+					49A869072EC51BDE00F4FD54 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 49A868ED2EC51BDD00F4FD54;
+					};
+				};
+			};
+			buildConfigurationList = 49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "iphone_sensor_app_no_claude" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49A868E52EC51BDD00F4FD54;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 49A868EF2EC51BDD00F4FD54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
+				49A868FD2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
+				49A869072EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
+				4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */,
+				4907B4E32ECB8BBE00491BD2 /* Sensor Watch AppTests */,
+				4907B4ED2ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4907B4D32ECB8BBD00491BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4E22ECB8BBE00491BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4EC2ECB8BBE00491BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868EC2EC51BDD00F4FD54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868FC2EC51BDE00F4FD54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A869062EC51BDE00F4FD54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4907B4D12ECB8BBD00491BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4E02ECB8BBE00491BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4907B4EA2ECB8BBE00491BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868EA2EC51BDD00F4FD54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A868FA2EC51BDE00F4FD54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49A869042EC51BDE00F4FD54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4907B4E62ECB8BBE00491BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
+			targetProxy = 4907B4E52ECB8BBE00491BD2 /* PBXContainerItemProxy */;
+		};
+		4907B4F02ECB8BBE00491BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
+			targetProxy = 4907B4EF2ECB8BBE00491BD2 /* PBXContainerItemProxy */;
+		};
+		4907B4F72ECB8BBE00491BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
+			targetProxy = 4907B4F62ECB8BBE00491BD2 /* PBXContainerItemProxy */;
+		};
+		49A869002EC51BDE00F4FD54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */;
+			targetProxy = 49A868FF2EC51BDE00F4FD54 /* PBXContainerItemProxy */;
+		};
+		49A8690A2EC51BDE00F4FD54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */;
+			targetProxy = 49A869092EC51BDE00F4FD54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4907B4FA2ECB8BBE00491BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sensor Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sensor-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sensor;
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app continuously records accelerometer data in the background for motion analysis. Data is saved to CSV files on your Apple Watch for later export.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.andrew.iphone-sensor-app-no-claude";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4907B4FB2ECB8BBE00491BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sensor Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sensor-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Sensor;
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app continuously records accelerometer data in the background for motion analysis. Data is saved to CSV files on your Apple Watch for later export.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.andrew.iphone-sensor-app-no-claude";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		4907B4FC2ECB8BBE00491BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensor Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4907B4FD2ECB8BBE00491BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensor Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		4907B4FE2ECB8BBE00491BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Sensor Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		4907B4FF2ECB8BBE00491BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Sensor Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		49A869102EC51BDE00F4FD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49A869112EC51BDE00F4FD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49A869132EC51BDE00F4FD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iphone_sensor_app_no_claude/Preview Content\"";
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iphone-sensor-app-no-claude-Info.plist";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect shakes and improve your experience.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49A869142EC51BDE00F4FD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iphone_sensor_app_no_claude/Preview Content\"";
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iphone-sensor-app-no-claude-Info.plist";
+				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect shakes and improve your experience.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49A869162EC51BDE00F4FD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphone_sensor_app_no_claude.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphone_sensor_app_no_claude";
+			};
+			name = Debug;
+		};
+		49A869172EC51BDE00F4FD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphone_sensor_app_no_claude.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphone_sensor_app_no_claude";
+			};
+			name = Release;
+		};
+		49A869192EC51BDE00F4FD54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iphone_sensor_app_no_claude;
+			};
+			name = Debug;
+		};
+		49A8691A2EC51BDE00F4FD54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJG5CHZ469;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iphone_sensor_app_no_claude;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4907B4FA2ECB8BBE00491BD2 /* Debug */,
+				4907B4FB2ECB8BBE00491BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4907B5012ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4907B4FC2ECB8BBE00491BD2 /* Debug */,
+				4907B4FD2ECB8BBE00491BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4907B5022ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4907B4FE2ECB8BBE00491BD2 /* Debug */,
+				4907B4FF2ECB8BBE00491BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "iphone_sensor_app_no_claude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A869102EC51BDE00F4FD54 /* Debug */,
+				49A869112EC51BDE00F4FD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A869132EC51BDE00F4FD54 /* Debug */,
+				49A869142EC51BDE00F4FD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A869152EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A869162EC51BDE00F4FD54 /* Debug */,
+				49A869172EC51BDE00F4FD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A869182EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A869192EC51BDE00F4FD54 /* Debug */,
+				49A8691A2EC51BDE00F4FD54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49A868E62EC51BDD00F4FD54 /* Project object */;
+}
