@@ -6,7 +6,19 @@
 //
 
 import SwiftUI
-import CoreMotion
+
+/// File synchronization state
+enum SyncState: String, Codable, Hashable {
+    case pending      // Metadata known, file not yet transferred from watch
+    case transferring // Transfer in progress
+    case synced       // Successfully transferred and saved to iPhone
+}
+
+/// Source device for the file
+enum DeviceType: String, Codable, Hashable {
+    case watch
+    case phone // Reserved for future use if phone recording is re-enabled
+}
 
 /// Holds file metadata for display and sorting
 struct FileInfo: Identifiable, Hashable {
@@ -15,6 +27,9 @@ struct FileInfo: Identifiable, Hashable {
     let size: Int64
     let creationDate: Date
     let modificationDate: Date
+    var syncState: SyncState = .synced
+    var transferProgress: Double = 0.0
+    var sourceDevice: DeviceType = .watch
 
     var fileName: String {
         url.lastPathComponent
@@ -68,13 +83,14 @@ enum FileSortOption: String, CaseIterable {
 }
 
 struct ContentView: View {
-    let motionRecorder = MotionRecorder()
+    let csvFileManager = CSVFileManager()
+    @EnvironmentObject var watchConnectivity: WatchConnectivityManager
     @State var fileInfos: [FileInfo] = []
     @State var sortOption: FileSortOption = .newestFirst
-    @State var showEducationAlert = false
     @State var showShareSheet = false
     @State var filesToShare: [URL] = []
     @State var showDeleteAllConfirmation = false
+    @State var filesCurrentlyTransferring: Set<String> = [] // Track files being downloaded
 
     /// Returns sorted files based on current sort option
     var sortedFiles: [FileInfo] {
@@ -96,35 +112,62 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            // Educational banner about background recording
+            // Header for Watch File Manager
             VStack(alignment: .leading, spacing: 8) {
-                Text("📱 Background Recording Active")
+                Text("⌚ Apple Watch Sensor Data")
                     .font(.headline)
-                Text("Keep this app in the background (don't force-quit) for continuous data collection. The app will process data automatically.")
+                Text("Files are automatically synced from your Apple Watch")
                     .font(.caption)
                     .foregroundColor(.secondary)
-                Button("Learn More") {
-                    showEducationAlert = true
+
+                // Watch connectivity status
+                HStack(spacing: 8) {
+                    Circle()
+                        .fill(watchConnectivity.isReachable ? Color.green : Color.orange)
+                        .frame(width: 8, height: 8)
+                    Text(watchConnectivity.isReachable ? "Watch Connected" : "Watch Not Reachable")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+
+                    if watchConnectivity.syncInProgress {
+                        ProgressView()
+                            .scaleEffect(0.7)
+                        Text("Syncing...")
+                            .font(.caption2)
+                            .foregroundColor(.blue)
+                    }
                 }
-                .font(.caption)
             }
             .padding()
             .background(Color.blue.opacity(0.1))
             .cornerRadius(10)
             .padding(.horizontal)
 
-            if motionRecorder.checkAvailability() {
-                Text("✅ Accelerometer is available")
-                    .foregroundColor(.green)
-            } else {
-                Text("❌ Accelerometer is NOT available")
-                    .foregroundColor(.red)
-            }
+            HStack(spacing: 10) {
+                Button(action: {
+                    watchConnectivity.requestSyncFromWatch()
+                }) {
+                    HStack {
+                        Image(systemName: "arrow.down.circle")
+                        Text("Sync from Watch")
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(!watchConnectivity.isReachable || watchConnectivity.syncInProgress)
 
-            Button("Refresh Files") {
-                refreshFiles()
+                Button(action: {
+                    watchConnectivity.requestDeleteSyncedFilesOnWatch()
+                }) {
+                    HStack {
+                        Image(systemName: "trash.circle")
+                        Text("Delete Synced")
+                    }
+                    .font(.caption)
+                }
+                .buttonStyle(.bordered)
+                .tint(.orange)
+                .disabled(!watchConnectivity.isReachable)
             }
-            .buttonStyle(.bordered)
 
             VStack(spacing: 10) {
                 HStack(spacing: 10) {
@@ -170,75 +213,86 @@ struct ContentView: View {
                   ForEach(sortedFiles) { fileInfo in
                       HStack {
                           VStack(alignment: .leading, spacing: 4) {
-                              // Filename
-                              Text(fileInfo.fileName)
-                                  .font(.system(.caption, design: .monospaced))
+                              // Date and time (parsed from filename) with sync state badge
+                              HStack(spacing: 6) {
+                                  Text(formatDataDate(fileInfo.dataDate))
+                                      .font(.system(.body, design: .default))
+                                      .fontWeight(.medium)
+                                      .opacity(fileInfo.syncState == .pending ? 0.5 : 1.0)
+
+                                  // Sync state badge
+                                  if fileInfo.syncState == .pending {
+                                      Text("⌚ On Watch")
+                                          .font(.caption2)
+                                          .padding(.horizontal, 6)
+                                          .padding(.vertical, 2)
+                                          .background(Color.orange.opacity(0.2))
+                                          .cornerRadius(4)
+                                  } else if fileInfo.syncState == .transferring {
+                                      ProgressView()
+                                          .scaleEffect(0.6)
+                                  }
+                              }
 
                               // File size
-                              Text("\(fileInfo.size) bytes")
+                              Text(formatFileSize(fileInfo.size))
                                   .font(.caption2)
                                   .foregroundColor(.secondary)
-
-                              // Creation date
-                              Text("Created: \(formatDate(fileInfo.creationDate))")
-                                  .font(.caption2)
-                                  .foregroundColor(.secondary)
-
-                              // Modification date (if different from creation)
-                              if abs(fileInfo.modificationDate.timeIntervalSince(fileInfo.creationDate)) > 1 {
-                                  Text("Modified: \(formatDate(fileInfo.modificationDate))")
-                                      .font(.caption2)
-                                      .foregroundColor(.secondary)
-                              }
+                                  .opacity(fileInfo.syncState == .pending ? 0.5 : 1.0)
                           }
                           Spacer()
-                          Button("Share") {
-                              // Check if file exists before sharing
-                              if FileManager.default.fileExists(atPath: fileInfo.url.path) {
-                                  filesToShare = [fileInfo.url]
-                                  showShareSheet = true
-                              } else {
-                                  print("File doesn't exist: \(fileInfo.url.path)")
+
+                          if fileInfo.syncState == .pending {
+                              // Download button for pending files
+                              Button(action: {
+                                  print("📱 Requesting download of: \(fileInfo.fileName)")
+                                  // Add to transferring set
+                                  filesCurrentlyTransferring.insert(fileInfo.fileName)
+                                  // Refresh to update UI
+                                  refreshFiles()
+                                  // Request file from watch
+                                  watchConnectivity.requestFile(fileInfo.fileName)
+                              }) {
+                                  Image(systemName: "arrow.down.circle")
                               }
+                              .buttonStyle(.bordered)
+                              .disabled(!watchConnectivity.isReachable)
+                          } else if fileInfo.syncState == .transferring {
+                              // Show progress indicator
+                              ProgressView()
+                                  .scaleEffect(0.8)
+                          } else {
+                              // Share button for synced files
+                              Button("Share") {
+                                  // Check if file exists before sharing
+                                  if FileManager.default.fileExists(atPath: fileInfo.url.path) {
+                                      filesToShare = [fileInfo.url]
+                                      showShareSheet = true
+                                  } else {
+                                      print("File doesn't exist: \(fileInfo.url.path)")
+                                  }
+                              }
+                              .buttonStyle(.bordered)
                           }
-                          .buttonStyle(.bordered)
                       }
                   }
                   .onDelete(perform: deleteFiles)
               }
         }
         .onAppear {
+            print("📱 ContentView appeared - loading files")
             refreshFiles()
-            // Show education alert on first launch
-            if !UserDefaults.standard.bool(forKey: "hasSeenEducation") {
-                showEducationAlert = true
-                UserDefaults.standard.set(true, forKey: "hasSeenEducation")
-            }
         }
         .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("RefreshFileList"))) { _ in
+            print("📱 Received RefreshFileList notification")
+            refreshFiles()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            print("📱 App entering foreground - refreshing files")
             refreshFiles()
         }
         .sheet(isPresented: $showShareSheet) {
             ShareSheet(fileURLs: filesToShare)
-        }
-        .alert("How Background Recording Works", isPresented: $showEducationAlert) {
-            Button("Got it!", role: .cancel) { }
-        } message: {
-            Text("""
-            This app records sensor data continuously in the background using CMSensorRecorder.
-
-            ⚠️ Important:
-            • DON'T force-quit the app (swipe up in app switcher)
-            • Just press the home button to background the app
-            • The app will automatically process and save data every 30 seconds while open
-            • Data is saved in 30-minute chunks as CSV files
-
-            If you force-quit or the device restarts:
-            • Data up to 12 hours old will be recovered when you reopen the app
-            • After 12 hours, unprocessed data is lost
-
-            For best results, open the app at least once every 12 hours.
-            """)
         }
         .alert("Delete All Files?", isPresented: $showDeleteAllConfirmation) {
             Button("Cancel", role: .cancel) { }
@@ -251,11 +305,47 @@ struct ContentView: View {
     }
 
     func refreshFiles() {
-        fileInfos = motionRecorder.getCSVFilesWithMetadata()
-        print("Refreshed file list: \(fileInfos.count) files")
+        // Combine locally synced files with pending files from watch
+        let syncedFiles = csvFileManager.getCSVFilesWithMetadata()
+        var allFiles = syncedFiles + watchConnectivity.pendingFiles
+
+        // Get set of synced file names for quick lookup
+        let syncedFileNames = Set(syncedFiles.map { $0.fileName })
+
+        // Remove files from transferring set if they're now synced
+        let completedTransfers = filesCurrentlyTransferring.intersection(syncedFileNames)
+        if !completedTransfers.isEmpty {
+            print("📱 Completed transfers: \(completedTransfers)")
+            filesCurrentlyTransferring.subtract(completedTransfers)
+        }
+
+        // Mark files that are currently transferring
+        for i in 0..<allFiles.count {
+            if filesCurrentlyTransferring.contains(allFiles[i].fileName) {
+                allFiles[i].syncState = .transferring
+            }
+        }
+
+        fileInfos = allFiles
+        print("📱 Refreshed file list: \(syncedFiles.count) synced, \(watchConnectivity.pendingFiles.count) pending, \(filesCurrentlyTransferring.count) transferring")
     }
 
-    /// Format a date for display in the file list
+    /// Format the data collection date for display (primary display)
+    func formatDataDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, yyyy 'at' h:mm:ss a"
+        return formatter.string(from: date)
+    }
+
+    /// Format file size in human-readable format
+    func formatFileSize(_ bytes: Int64) -> String {
+        let formatter = ByteCountFormatter()
+        formatter.allowedUnits = [.useKB, .useMB]
+        formatter.countStyle = .file
+        return formatter.string(fromByteCount: bytes)
+    }
+
+    /// Format a date for display (legacy, kept for compatibility)
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short

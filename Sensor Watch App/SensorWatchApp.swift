@@ -39,8 +39,12 @@ class AppState: ObservableObject {
     let motionRecorder = MotionRecorder()
     private var backgroundTaskTimer: Timer?
     private var hasLaunched = false
+    private var previousFileCount = 0
 
     init() {
+        // Initialize WatchConnectivity
+        _ = WatchConnectivityManager.shared
+
         // Start continuous recording and process data on first launch
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             guard let self = self else { return }
@@ -50,6 +54,12 @@ class AppState: ObservableObject {
                 self.motionRecorder.startContinuousRecording()
                 self.motionRecorder.processAndSaveUnprocessedData()
                 self.scheduleBackgroundProcessing()
+
+                // Initial metadata sync
+                WatchConnectivityManager.shared.syncFileMetadata()
+
+                // Track initial file count
+                self.previousFileCount = self.motionRecorder.getCSVFiles().count
             }
         }
     }
@@ -61,6 +71,9 @@ class AppState: ObservableObject {
         // Notify UI to refresh file list
         NotificationCenter.default.post(name: NSNotification.Name("RefreshFileList"), object: nil)
 
+        // Sync metadata
+        WatchConnectivityManager.shared.syncFileMetadata()
+
         // Restart timer if needed
         if backgroundTaskTimer == nil {
             scheduleBackgroundProcessing()
@@ -70,6 +83,9 @@ class AppState: ObservableObject {
     func handleAppEnteredBackground() {
         // Timer will continue running in background on watchOS
         print("⌚ Timer will continue processing in background")
+
+        // Sync metadata before backgrounding
+        WatchConnectivityManager.shared.syncFileMetadata()
     }
 
     // MARK: - Background Processing
@@ -86,6 +102,26 @@ class AppState: ObservableObject {
             print("⏰ Background timer fired - processing data")
 
             self.motionRecorder.processAndSaveUnprocessedData()
+
+            // Check if new files were created
+            let currentFileCount = self.motionRecorder.getCSVFiles().count
+            if currentFileCount > self.previousFileCount {
+                print("⌚ New files detected: \(currentFileCount - self.previousFileCount) files")
+
+                // Get new files
+                let allFiles = self.motionRecorder.getCSVFiles()
+                let newFiles = Array(allFiles.suffix(currentFileCount - self.previousFileCount))
+
+                // Queue new files for transfer
+                for fileURL in newFiles {
+                    WatchConnectivityManager.shared.queueFileForTransfer(fileURL)
+                }
+
+                self.previousFileCount = currentFileCount
+
+                // Update metadata
+                WatchConnectivityManager.shared.syncFileMetadata()
+            }
 
             // Notify UI to refresh file list
             NotificationCenter.default.post(name: NSNotification.Name("RefreshFileList"), object: nil)
